@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Construction</title>
+		<link href="./src/output.css" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>
+			.scroll-container {
+				overflow: hidden;
+				white-space: nowrap;
+				position: relative;
+				background-color: #ffc706;
+			}
+
+			.scroll-text {
+				display: inline-block;
+				white-space: nowrap;
+				animation: scroll-left 20s linear infinite;
+			}
+
+			@keyframes marquee {
+				0% {
+					transform: translateX(0%);
+				}
+				100% {
+					transform: translateX(-50%);
+				}
+			}
+			.animate-marquee {
+				animation: marquee 15s linear infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="bg-white py-4 md:py-9 shadow-md">
+			<div class="max-w-[1040px] w-full mx-auto px-5 flex items-center justify-between">
+				<div class="flex-shrink-0">
+					<img class="w-[160pxw-full md:] md:w-[120px] xl:w-40 xl:h-9" src="/img/header/logo.svg" alt="header-logo" />
+				</div>
+
+				<ul class="hidden md:flex items-center justify-between max-w-[600px] w-full">
+					<li
+						class="text-[15px] font-bold text-black hover:text-yellow-400 active:text-yellow-600 uppercase transition-all duration-200">
+						<a href="/"> +998-555-00-4444 00</a>
+					</li>
+					<li
+						class="text-[15px] font-bold text-black hover:text-yellow-400 active:text-yellow-600 uppercase transition-all duration-200">
+						<a href="/"> cts_admin_tg</a>
+					</li>
+					<li
+						class="text-[15px] font-bold text-black hover:text-yellow-400 active:text-yellow-600 uppercase transition-all duration-200">
+						<a href="/"> Toshkent, Sergeli, Fayzli 3</a>
+					</li>
+				</ul>
+
+				<div
+					id="modalMenu"
+					class="hidden fixed inset-0 z-40 bg-black/50 flex items-start justify-center pt-24 transition-all duration-300">
+					<div
+						class="bg-white w-[90%] max-w-[600px] rounded-lg p-6 shadow-lg transform -translate-y-10 opacity-0 transition-all duration-300"
+						id="modalMenuContent">
+						<ul class="flex flex-col gap-4">
+							<li
+								class="text-[15px] font-bold text-black hover:text-yellow-400 active:text-yellow-600 uppercase transition-all duration-200">
+								<a href="/">+998-555-00-4444 00</a>
+							</li>
+							<li
+								class="text-[15px] font-bold text-black hover:text-yellow-400 active:text-yellow-600 uppercase transition-all duration-200">
+								<a href="/">cts_admin_tg</a>
+							</li>
+							<li
+								class="text-[15px] font-bold text-black hover:text-yellow-400 active:text-yellow-600 uppercase transition-all duration-200">
+								<a href="/">Toshkent, Sergeli, Fayzli 3</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<button onclick="toggleModalMenu()">
+					<img class="block md:hidden w-11 h-11" src="/img/header/img-logo.svg" alt="" />
+				</button>
+				<button
+					class="hidden md:flex border-2 border-[#FFC706] text-[#FFC706] font-semibold px-5 py-2.5 hover:bg-yellow-100 active:bg-yellow-300 transition-all duration-200">
+					BOG‘LANISH
+				</button>
+			</div>
+		</header>
+
+		<section class="bg-[#D9D9D9] py-16">
+			<div class="max-w-[1040px] w-full mx-auto px-5 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+				<div class="w-full md:max-w-md text-center md:text-left">
+					<h2 class="font-bold text-3xl sm:text- uppercase4xl text-black mb-4">
+						Maxsus Texnikani Toshkentda Arendaga Berish Xizmati
+					</h2>
+					<p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
+						Работы выполняются квалифицированными операторами с соблюдением всех норм безопасности и сроков.
+					</p>
+
+					<div class="flex justify-center md:justify-start">
+						<button
+							class="border-2 border-[#FFC706] text-[#FFC706] font-semibold px-5 py-2.5 hover:bg-yellow-100 transition-all duration-200">
+							Construction
+						</button>
+					</div>
+				</div>
+
+				<div class="w-full max-w-[200px] sm:max-w-xs md:max-w-md">
+					<img class="w-full h-auto object-contain rounded-xl shadow-md" src="/img/hero/construction.png" alt="construction" />
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-white pt-12 pb-[45px] md:pb-[100px]">
+			<div class="max-w-[1040px] w-full mx-auto px-5">
+				<div class="grid grid-cols-3 gap-1.5 md:gap-6">
+					<div class="bg-[#D9D9D9] h-[104px] md:h-52 col-span-2 flex items-end p-[15px] md:p-5">
+						<p class="text-black font-semibold uppercase text-[15px] md:text-[25px]">Ehtiyot qismlar</p>
+					</div>
+
+					<div class="bg-[#D9D9D9] h-[104px] md:h-52 flex items-end p-[15px] md:p-5">
+						<p class="text-black font-semibold uppercase text-[15px] md:text-[25px]">Katalog</p>
+					</div>
+
+					<div class="bg-[#D9D9D9] h-[104px] md:h-52 flex items-end p-[15px] md:p-5">
+						<p class="text-black font-semibold uppercase text-[15px] md:text-[25px]">Arenda</p>
+					</div>
+
+					<div class="bg-[#D9D9D9] h-[104px] md:h-52 flex items-end p-[15px] md:p-5 col-span-2 md:col-span-1">
+						<p class="text-black font-semibold uppercase text-[15px] md:text-[25px]">
+							Servis va <br />
+							ta’mirlash
+						</p>
+					</div>
+
+					<div class="bg-[#D9D9D9] h-[104px] md:h-52 hidden md:flex items-end p-[15px] md:p-5">
+						<p class="text-black font-semibold uppercase text-[15px] md:text-[25px]">Kontaktlar</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="bg-white pb-[60px] md:pb-[100px]">
+			<div class="max-w-[1040px] w-full mx-auto px-5 flex items-center justify-center flex-col">
+				<div class="mb-[18px] font-normal text-[25px].5 md:mb-5 text-center">
+					<h2 class="text-xl md:text-[35px] font-bold mb-[5px] md:mb-[18px] text-[25px]. uppercase5 uppercase">
+						nima uchun biz?
+					</h2>
+					<p class="text-xs md:text-xl font-medium text-[#FFC70680]">Quyidagi videoda bu savolga javob topasiz</p>
+				</div>
+				<video controls class="w-[500px] md:w-[700px] h-[300px] md:h-[386px] rounded-xl">
+					<source src="https://www.youtube.com/watch?v=K1k9_qOtD2E&list=PL-FgYKIWSlAepfwDg9wW_rlw8VGH9vQZI" type="video/mp4" />
+				</video>
+			</div>
+		</div>
+		<section class="bg-white pb-20">
+			<div class="max-w-[1040px] w-full mx-auto px-5 flex items-center justify-center flex-col">
+				<div class="mb-[27px] text-center hidden md:block">
+					<h2 class="font-bold text-[35px] mb-[18px] text-[25px]. uppercase5 uppercase">imkoniyatlarimiz</h2>
+					<p class="font-medium text-[15px]">
+						Biz XCMG qurilish uskunalarining yetakchi distribyutori va dileri <br />
+						bo‘lib, biznesingiz uchun to‘liq yechimlarni taqdim etamiz
+					</p>
+				</div>
+				<ul class="grid grid-cols-1 md:grid md:grid-cols-2 lg:flex items-center justify-center">
+					<li class="max-w-[235px] w-full mr-5">
+						<img
+							class="w-[235px] h-[155px]"
+							src="https://spetstex.uz/wp-content/uploads/2022/03/avtokran-50-tonn-xcmg-qy50ka-768x576.jpg"
+							alt="" />
+						<div class="bg-[#D9D9D9] pt-4 pb-12 px-[15px]">
+							<h2 class="font-bold text-xl mb-[15px] uppercase">Rasmiy vakil</h2>
+							<p class="font-normal text-[15px]">Biz XCMG korxonasining rasmiy dillerimiz.</p>
+						</div>
+					</li>
+					<li class="max-w-[235px] w-full mr-5">
+						<img
+							class="w-[235px] h-[155px]"
+							src="https://spetstex.uz/wp-content/uploads/2022/04/avtovyshka-2-1024x1024.webp"
+							alt="" />
+						<div class="bg-[#D9D9D9] pt-4 pb-[30px] px-[15px]">
+							<h2 class="font-bold text-xl mb-[15px] uppercase">servis</h2>
+							<p class="font-normal text-[15px]">
+								Biz kafolat va kafolatdan <br />
+								keyingi xizmatni taqdim <br />
+								etamiz.
+							</p>
+						</div>
+					</li>
+					<li class="max-w-[235px] w-full mr-5">
+						<img
+							class="w-[235px] h-[155px]"
+							src="https://spetstex.uz/wp-content/uploads/2024/12/avtolift-xizmati-avtolift-uslugi-2-1024x1024.jpg"
+							alt="" />
+						<div class="bg-[#D9D9D9] pt-4 pb-[30px] px-[15px]">
+							<h2 class="font-bold text-xl mb-[15px] uppercase">ehtiyot qismlar</h2>
+							<p class="font-normal text-[15px]">
+								Texnikangiz uchun <br />
+								texnikalar nalich va <br />
+								buyurtma asosida.
+							</p>
+						</div>
+					</li>
+					<li class="max-w-[235px] w-full">
+						<img
+							class="w-[235px] h-[155px]"
+							src="https://spetstex.uz/wp-content/uploads/2022/04/manipuljator-1024x1024.webp"
+							alt="" />
+						<div class="bg-[#D9D9D9] pt-4 pb-12 px-[15px]">
+							<h2 class="font-bold text-xl mb-[15px] uppercase">kompaniya</h2>
+							<p class="font-normal text-[15px]">Biz bilan hamkorlik qilish oqilona va foydali qarordir.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<div class="mb-[61px] md:mb-[109px]">
+			<div class="max-w-[1040px] w-full mx-auto px-5">
+				<h2 class="hidden md:block font-bold text-[35px] text-center mb-[17px] uppercase">PRODUKSIYA</h2>
+				<div class="border border-[#B3B0B0]">
+					<div
+						class="grid grid-cols-2 md:grid md:grid-cols-3 lg:grid lg:grid-cols-4 border-collapse divide-x divide-y border-gray-300">
+						<div class="pt-4 pb-[33px] px-[22px] text-center">
+							<h2 class="mb-[18px] font-normal text-[25px]">Avtovishka xizmati</h2>
+							<div class="w-full md:w-[207px] h-[153px] bg-[#D9D9D9]">
+								<img
+									class="w-full md:w-[207px] h-[153px]"
+									src="https://spetstex.uz/wp-content/uploads/2022/04/avtovyshka-2-1024x1024.webp"
+									alt="" />
+							</div>
+						</div>
+						<div class="pt-4 pb-[33px] px-[22px] text-center">
+							<h2 class="mb-[18px] font-normal text-[25px]">Услуги автолифта</h2>
+							<div class="w-full md:w-[207px] h-[153px] bg-[#D9D9D9]">
+								<img
+									class="w-full md:w-[207px] h-[153px]"
+									src="https://spetstex.uz/wp-content/uploads/2024/12/avtolift-xizmati-avtolift-uslugi-2-1024x1024.jpg"
+									alt="" />
+							</div>
+						</div>
+						<div class="pt-4 pb-[33px] px-[22px] text-center">
+							<h2 class="mb-[18px] font-normal text-[25px]">Услуги погрузчика</h2>
+							<div class="w-full md:w-[207px] h-[153px] bg-[#D9D9D9]">
+								<img
+									class="w-full md:w-[207px] h-[153px]"
+									src="https://spetstex.uz/wp-content/uploads/2024/12/kara-xizmati-uslugi-avtokara-1024x1024.jpg"
+									alt="" />
+							</div>
+						</div>
+						<div class="pt-4 pb-[33px] px-[22px] text-center">
+							<h2 class="mb-[18px] font-normal text-[25px]">Manipulyator xizmati</h2>
+							<div class="w-full md:w-[207px] h-[153px] bg-[#D9D9D9]">
+								<img
+									class="w-full md:w-[207px] h-[153px]"
+									src="https://spetstex.uz/wp-content/uploads/2022/04/manipuljator-1024x1024.webp"
+									alt="" />
+							</div>
+						</div>
+						<div class="pt-4 pb-[33px] px-[22px] text-center">
+							<h2 class="mb-[18px] font-normal text-[25px]">Shalanda Xizmati</h2>
+							<div class="w-full md:w-[207px] h-[153px] bg-[#D9D9D9]">
+								<img
+									class="w-full md:w-[207px] h-[153px]"
+									src="https://spetstex.uz/wp-content/uploads/2022/04/dlinnomer-1024x1024.webp"
+									alt="" />
+							</div>
+						</div>
+						<div class="pt-4 pb-[33px] px-[22px] text-center">
+							<h2 class="mb-[18px] font-normal text-[25px]">Услуги катка</h2>
+							<div class="w-full md:w-[207px] h-[153px] bg-[#D9D9D9]">
+								<img
+									class="w-full md:w-[207px] h-[153px]"
+									src="https://spetstex.uz/wp-content/uploads/2024/12/katok-xizmati-katok-uslugi--1024x1024.jpg"
+									alt="" />
+							</div>
+						</div>
+						<div class="pt-4 pb-[33px] px-[22px] text-center">
+							<h2 class="mb-[18px] font-normal text-[25px]">Ekskavator Xizmati</h2>
+							<div class="w-full md:w-[207px] h-[153px] bg-[#D9D9D9]">
+								<img
+									class="w-full md:w-[207px] h-[153px]"
+									src="https://spetstex.uz/wp-content/uploads/2022/09/volvo-ew145b-jekskavator-hizmati-uslugi-jekskavatora-ekskavator-xizmati-1024x768.jpg"
+									alt="" />
+							</div>
+						</div>
+						<div class="pt-4 pb-[33px] px-[22px] text-center">
+							<h2 class="mb-[18px] font-normal text-[25px]">Услуги грейдера</h2>
+							<div class="w-full md:w-[207px] h-[153px] bg-[#D9D9D9]">
+								<img
+									class="w-full md:w-[207px] h-[153px]"
+									src="https://spetstex.uz/wp-content/uploads/2024/12/greyder-xizmati-grejder-uslugi-2-1024x1024.jpg"
+									alt="" />
+							</div>
+						</div>
+						<div class="pt-4 pb-[33px] px-[22px] text-center">
+							<h2 class="mb-[18px] font-normal text-[25px]">Услуги эвакуатора</h2>
+							<div class="w-full md:w-[207px] h-[153px] bg-[#D9D9D9]">
+								<img
+									class="w-full md:w-[207px] h-[153px]"
+									src="https://spetstex.uz/wp-content/uploads/2024/12/evakuator-xizmati-jevakuator-uslugi-1024x1024.jpg"
+									alt="" />
+							</div>
+						</div>
+						<div class="pt-4 pb-[33px] px-[22px] text-center">
+							<h2 class="mb-[18px] font-normal text-[25px]">Услуги самосвала</h2>
+							<div class="w-full md:w-[207px] h-[153px] bg-[#D9D9D9]">
+								<img
+									class="w-full md:w-[207px] h-[153px]"
+									src="https://spetstex.uz/wp-content/uploads/2024/12/samosval-xizmati-samosval-uslugi-2-1024x1024.jpg"
+									alt="" />
+							</div>
+						</div>
+						<div class="pt-4 pb-[33px] px-[22px] text-center">
+							<h2 class="mb-[18px] font-normal text-[25px]">Услуги трала</h2>
+							<div class="w-full md:w-[207px] h-[153px] bg-[#D9D9D9]">
+								<img
+									class="w-full md:w-[207px] h-[153px]"
+									src="https://spetstex.uz/wp-content/uploads/2024/12/tral-xizmati-tral-uslugi-1024x1024.jpg"
+									alt="" />
+							</div>
+						</div>
+
+						<div class="pt-[33px] pb-[74px] px-[42.5] text-center flex flex-col items-center justify-center">
+							<h2 class="mb-[59px] font-normal text-[25px]">To‘liq katalog</h2>
+							<button
+								class="bg-[#FFC706] border-2 border-[#FFC706] text-white font-bold py-5 px-[25px] hover:bg-yellow-100 hover:text-black active:bg-yellow-300 transition-all duration-200">
+								TANISHISH
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="mb-14 md:mb-[73px]">
+			<div class="max-w-[80%] md:max-w-[860px] lg:max-w-[910px] w-full mx-auto px-5">
+				<!-- Sarlavha -->
+				<div class="mb-4 md:mb-8 lg:mb-14 text-center">
+					<h2 class="text-xl md:text-[35px] font-bold uppercase mb-2.5 md:mb-[21px]">Savollar qoldimi?</h2>
+					<p class="text-[#FFC706] text-2.5 md:text-[15px] font-medium">
+						Ariza qoldiring va biz siz bilan atigi 10 <br />
+						daqiqa ichida bog'lanamiz!
+					</p>
+				</div>
+
+				<!-- Forma bo‘limi -->
+				<div class="bg-[#D9D9D9] px-[26px] py-[30px] md:pt-[35px] md:pb-[42px] md:pr-[85px] md:pl-[19px] rounded-none">
+					<form class="md:flex items-center justify-between" name="submit-to-google-sheet">
+						<div class="max-w-full md:max-w-[317px] w-full">
+							<label class="block text-[#FFC706] font-medium text-[15px] mb-2.5 md:mb-[21px]"
+								>Ismingiz?
+								<input
+									type="text"
+									name="ism"
+									required
+									class="w-full p-3 rounded-[10px] mt-0.5 md:mt-[5px] focus:outline-none bg-white"
+									placeholder="Ismingiz" />
+							</label>
+							<label class="block text-[#FFC706] font-medium text-[15px]"
+								>Telefon raqamingiz?
+								<input
+									type="tel"
+									name="tel"
+									id="phoneInput"
+									required
+									class="w-full p-3 rounded-[10px] mt-[5px] focus:outline-none bg-white"
+									placeholder="+998 __ ___ __ __"
+									maxlength="17" />
+							</label>
+						</div>
+
+						<div class="flex-row md:flex md:items-end justify-center md:flex-col items-center">
+							<div class="mb-[11px]">
+								<label class="block text-[#FFC706] mb-[5px]">Savollar bormi?</label>
+								<textarea
+									name="savol"
+									required
+									class="w-full md:w-[316px] p-3 rounded-[10px] h-[91px] bg-white resize-none focus:outline-none"></textarea>
+							</div>
+							<button
+								class="bg-[#FFC706] border-2 border-[#FFC706] text-white font-bold py-2.5 px-5 hover:bg-yellow-100 hover:text-black active:bg-yellow-300 transition-all duration-200 md:m-0 mx-auto">
+								YUBORISH
+							</button>
+						</div>
+
+						<!-- O‘ng: Tugma -->
+					</form>
+				</div>
+			</div>
+		</section>
+		<div class="mb-[42px] md:mb-[50px] lg:mb-[68px]">
+			<div class="max-w-[1040px] w-full mx-auto px-5">
+				<div class="py-[60px] md:py-[100px] lg:py-[140px] mb-7 md:px-[30px] lg:px-[45px] bg-[#FFC706]">
+					<h2 class="font-bold text-[25px] md:text-5xl lg:text-[80px] text-white text-center uppercase">logistika kerakmi?</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-[#E9E9E9] mb-[42px] md:mb-[49px]">
+			<div class="max-w-[1040px] w-full mx-auto px-5 flex items-center justify-between">
+				<img class="w-[54px] md:w-16 lg:w-[82px] h-11 md:h-14 lg:h-[79px] mt-5 mb-20" src="/img/xcmg/xcmg-logo.svg" alt="" />
+				<img class="w-[54px] md:w-16 lg:w-[82px] h-11 md:h-14 lg:h-[79px] mt-[92px] mb-2" src="/img/xcmg/xcmg-logo.svg" alt="" />
+				<img class="w-[54px] md:w-16 lg:w-[82px] h-11 md:h-14 lg:h-[79px] mt-5 mb-20" src="/img/xcmg/xcmg-logo.svg" alt="" />
+				<img class="w-[54px] md:w-16 lg:w-[82px] h-11 md:h-14 lg:h-[79px] mt-[92px] mb-2" src="/img/xcmg/xcmg-logo.svg" alt="" />
+				<img class="w-[54px] md:w-16 lg:w-[82px] h-11 md:h-14 lg:h-[79px] mt-5 mb-20" src="/img/xcmg/xcmg-logo.svg" alt="" />
+				<img
+					class="md:block hidden w-[54px] md:w-16 lg:w-[82px] h-11 md:h-14 lg:h-[79px] mt-[92px] mb-2"
+					src="/img/xcmg/xcmg-logo.svg"
+					alt="" />
+				<img
+					class="md:block hidden w-[54px] md:w-16 lg:w-[82px] h-11 md:h-14 lg:h-[79px] mt-5 mb-20"
+					src="/img/xcmg/xcmg-logo.svg"
+					alt="" />
+				<img class="hidden md:block w-16 lg:w-[82px] h-14 lg:h-[79px] mt-[92px] mb-2" src="/img/xcmg/xcmg-logo.svg" alt="" />
+				<img class="hidden md:block w-16 lg:w-[82px] h-14 lg:h-[79px] mt-5 mb-20" src="/img/xcmg/xcmg-logo.svg" alt="" />
+				<img class="hidden md:block w-16 lg:w-[82px] h-14 lg:h-[79px] mt-[92px] mb-2" src="/img/xcmg/xcmg-logo.svg" alt="" />
+			</div>
+		</div>
+
+		<div class="mb-[23px] md:mb-[80px]">
+			<div class="overflow-hidden whitespace-nowrap relative bg-[#ffc706] text-black font-semibold text-[15px] py-[13px]">
+				<div class="flex animate-marquee w-[200%]">
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+
+					<!-- 2-nusxa -->
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+				</div>
+			</div>
+			<div class="max-w-[1040px] w-full mx-auto px-5">
+				<div class="grid grid-cols-2 md:grid md:grid-cols-4 gap-5 my-[45px]">
+					<div>
+						<div class="bg-[#B3B0B0] mb-[14px]">
+							<img
+								class="w-full h-[155px]"
+								src="https://spetstex.uz/wp-content/uploads/2025/06/montazh-sotovyh-vyshek-i-rezervuarov.jpg"
+								alt="img" />
+						</div>
+						<h3 class="font-bold text-[15px] mb-[19px]">Монтаж сотовых вышек и резервуаров</h3>
+						<p class="font-normal text-xs">
+							Biz3 XCMG korxonasining rasmiy <br />
+							dillerimiz.
+						</p>
+					</div>
+					<div>
+						<div class="bg-[#B3B0B0] mb-[14px]">
+							<img
+								class="w-full h-[155px]"
+								src="https://spetstex.uz/wp-content/uploads/2025/06/peremeshhenie-i-ustanovka-stankov-transformatorov.jpg"
+								alt="img" />
+						</div>
+						<h3 class="font-bold text-[15px] mb-[19px]">
+							Перемещение и установка <br />
+							станков, трансформаторов
+						</h3>
+						<p class="font-normal text-xs">
+							Biz XCMG korxonasining rasmiy <br />
+							dillerimiz.
+						</p>
+					</div>
+					<div>
+						<div class="bg-[#B3B0B0] mb-[14px]">
+							<img
+								class="w-full h-[155px]"
+								src="https://spetstex.uz/wp-content/uploads/2025/06/sborka-i-razborka-bashennyh-i-kozlovyh-kranov.jpg"
+								alt="img" />
+						</div>
+						<h3 class="font-bold text-[15px] mb-[19px]">Сборка и разборка <br />башенных и козловых кранов</h3>
+						<p class="font-normal text-xs">
+							Biz XCMG korxonasining rasmiy <br />
+							dillerimiz.
+						</p>
+					</div>
+					<div>
+						<div class="bg-[#B3B0B0] mb-[14px]">
+							<img
+								class="w-full h-[155px]"
+								src="https://spetstex.uz/wp-content/uploads/2025/06/montazh-stolbov-kolonn-i-opor.jpg"
+								alt="img" />
+						</div>
+						<h3 class="font-bold text-[15px] mb-[19px]">Монтаж столбов, колонн и опор</h3>
+						<p class="font-normal text-xs">
+							Biz XCMG korxonasining rasmiy <br />
+							dillerimiz.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="overflow-hidden whitespace-nowrap relative bg-[#ffc706] text-black font-semibold text-[15px] py-[13px]">
+				<div class="flex animate-marquee w-[200%]">
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+
+					<!-- 2-nusxa -->
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+					<span class="mx-3 font-bold">YANGILIKLAR</span> <span class="mx-3 font-bold">YANGILIKLAR</span>
+				</div>
+			</div>
+		</div>
+
+		<footer class="bg-[#1E212C] text-white pt-[11px] pb-[17px]">
+			<div class="max-w-[1040px] w-full mx-auto px-5">
+				<div class="flex items-center-safe justify-between mb-7">
+					<img class="w-[133px] md:w-[309px] h-7 md:h-[91px]" src="/img/footer/footer-logo.png" alt="" />
+
+					<div class="flex items-center justify-center">
+						<div class="w-[41px] md:w-[61px] h-[41px] md:h-[63px] rounded-[50px] bg-white mr-[27px]">
+							<a href="https://www.instagram.com/" target="_blank">
+								<img
+									class="rounded-[50px] w-11 md:w-[61px] h-11 md:h-[63px]"
+									src="/img/footer/instagram-logo.png"
+									alt="instagram" />
+							</a>
+						</div>
+						<div class="w-[41px] md:w-[61px] h-[41px] md:h-[63px] rounded-[50px] bg-white mr-[27px]">
+							<a href="https://www.facebook.com/" target="_blank">
+								<img class="rounded-[50px] w-[61xp] h-11 md:h-[63px]" src="/img/footer/facebook.png" alt="facebook" />
+							</a>
+						</div>
+						<div class="w-[41px] md:w-[61px] h-[41px] md:h-[63px] rounded-[50px] bg-white">
+							<a href="https://www.whatsapp.com/" target="_blank">
+								<img class="rounded-[50px] w-[61xp] h-11 md:h-[63px]" src="/img/footer/whatsap.png" alt="" />
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex flex-col-reverse items-center justify-center gap-10 md:flex-row md:items-center md:justify-between">
+					<div class="flex items-center justify-between max-w-[253px] w-full">
+						<ul>
+							<li>
+								<a href="#" class="font-medium text-[15px] mb-2 transition-all hover:text-yellow-400 active:text-yellow-600"
+									>Biz haqimizda</a
+								>
+							</li>
+							<li>
+								<a href="#" class="font-medium text-[15px] mb-2 transition-all hover:text-yellow-400 active:text-yellow-600"
+									>Katalog</a
+								>
+							</li>
+							<li>
+								<a href="#" class="font-medium text-[15px] mb-2 transition-all hover:text-yellow-400 active:text-yellow-600"
+									>Arenda</a
+								>
+							</li>
+							<li>
+								<a href="#" class="font-medium text-[15px] transition-all hover:text-yellow-400 active:text-yellow-600"
+									>Ehtiyot qismlar</a
+								>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="#" class="font-medium text-[15px] mb-2 transition-all hover:text-yellow-400 active:text-yellow-600"
+									>Kontaktlar</a
+								>
+							</li>
+							<li>
+								<a href="#" class="font-medium text-[15px] mb-2 transition-all hover:text-yellow-400 active:text-yellow-600"
+									>Tender</a
+								>
+							</li>
+							<li>
+								<a href="#" class="font-medium text-[15px] mb-2 transition-all hover:text-yellow-400 active:text-yellow-600"
+									>Servis</a
+								>
+							</li>
+							<li>
+								<a href="#" class="font-medium text-[15px] transition-all hover:text-yellow-400 active:text-yellow-600"
+									>Yangiliklar</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<form class="items-center flex md:items-end justify-end flex-col max-w-[329px] w-full">
+						<p class="text-center md:text-left text-[15px] font-medium text-[#FFC706] mb-2.5">
+							Chegirmalarimiz haqida bilib borish uchun telefon raqamingizni qoldiring:
+						</p>
+						<input
+							type="text"
+							placeholder="ism"
+							class="w-full mb-[21px] p-2.5 md:p-[15px] rounded-[10px] border border-[#FFC706] bg-white text-black focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+						<button
+							class="bg-[#FFC706] border-2 border-[#FFC706] text-white font-bold py-2.5 px-5 hover:bg-yellow-100 hover:text-black active:bg-yellow-300 transition-all duration-200">
+							YUBORISH
+						</button>
+					</form>
+				</div>
+				<div class="text-center mt-[94px] text-[15px] font-light">© All rights reserved. Made with</div>
+			</div>
+		</footer>
+
+		<!-- JS -->
+		<script>
+			const scriptURL =
+				'https://script.google.com/macros/s/AKfycbxKqXCoILHllFaEB_44C1e_nfnhJfNnHmjYmyBB8db9Ufwm5_mMoaeiz4Q4xTvf7PAUZQ/exec';
+			const form = document.forms['submit-to-google-sheet'];
+
+			form.addEventListener('submit', e => {
+				e.preventDefault();
+				fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+					.then(response => console.log('Success!', response))
+					.catch(error => console.error('Error!', error.message));
+			});
+		</script>
+
+		<script>
+			document.getElementById('phoneInput').addEventListener('input', function (e) {
+				let input = e.target.value.replace(/\D/g, ''); // faqat raqamlarni olib qol
+				if (input.startsWith('998')) {
+					input = input.slice(3); // 998 ni olib tashla, chunki placeholderda bor
+				}
+
+				let formatted = '+998 ';
+				if (input.length > 2) {
+					formatted += input.substring(0, 2) + ' ';
+				} else {
+					formatted += input;
+					e.target.value = formatted;
+					return;
+				}
+				if (input.length > 5) {
+					formatted += input.substring(2, 5) + ' ';
+				} else {
+					formatted += input.substring(2);
+					e.target.value = formatted;
+					return;
+				}
+				if (input.length > 7) {
+					formatted += input.substring(5, 7) + ' ';
+				} else {
+					formatted += input.substring(5);
+					e.target.value = formatted;
+					return;
+				}
+				if (input.length > 9) {
+					formatted += input.substring(7, 9);
+				} else {
+					formatted += input.substring(7);
+				}
+
+				e.target.value = formatted;
+			});
+		</script>
+
+		<script>
+			function toggleModalMenu() {
+				const modal = document.getElementById('modalMenu');
+				const content = document.getElementById('modalMenuContent');
+
+				if (modal.classList.contains('hidden')) {
+					modal.classList.remove('hidden');
+					setTimeout(() => {
+						content.classList.remove('-translate-y-10', 'opacity-0');
+						content.classList.add('translate-y-0', 'opacity-100');
+					}, 10);
+				} else {
+					content.classList.add('-translate-y-10', 'opacity-0');
+					content.classList.remove('translate-y-0', 'opacity-100');
+					setTimeout(() => {
+						modal.classList.add('hidden');
+					}, 300);
+				}
+			}
+
+			// Fonni bosganda yopish
+			document.addEventListener('click', function (e) {
+				const modal = document.getElementById('modalMenu');
+				const content = document.getElementById('modalMenuContent');
+				if (!modal.classList.contains('hidden') && !content.contains(e.target) && !e.target.closest('button')) {
+					toggleModalMenu();
+				}
+			});
+
+			// EKRAN KATTALASHSA (md dan katta bo‘lsa) MODALNI YOPISH
+			window.addEventListener('resize', function () {
+				const modal = document.getElementById('modalMenu');
+				const content = document.getElementById('modalMenuContent');
+				if (window.innerWidth >= 768 && !modal.classList.contains('hidden')) {
+					content.classList.add('-translate-y-10', 'opacity-0');
+					content.classList.remove('translate-y-0', 'opacity-100');
+					setTimeout(() => {
+						modal.classList.add('hidden');
+					}, 300);
+				}
+			});
+		</script>
+	</body>
+</html>
