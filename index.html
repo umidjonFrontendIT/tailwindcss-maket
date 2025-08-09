@@ -59,11 +59,13 @@
 					id="modalMenu"
 					class="hidden fixed inset-0 z-40 bg-black/50 flex items-start justify-center transition-all duration-300">
 					<div
-						class="bg-white w-full max-w-full rounded-lg p-6 py-10 text-center shadow-lg transform -translate-y-10 opacity-0 transition-all duration-300"
+						class="bg-gray-200 blur- w-full max-w-full rounded-lg p-6 py-10 text-center shadow-lg transform -translate-y-10 opacity-0 transition-all duration-300"
 						id="modalMenuContent">
 						<ul class="flex flex-col gap-4">
 							<li class="ml-auto mb-5">
-								<button onclick="" class="mr-auto"><img src="img/hero/x-icon.svg" alt="icon" width="24" /></button>
+								<button onclick="closeModalMenu()" class="mr-auto">
+									<img src="img/hero/cross.png" alt="icon" width="24" />
+								</button>
 							</li>
 							<li
 								class="text-[15px] font-bold text-black hover:text-yellow-400 active:text-yellow-600 uppercase transition-all duration-200">
@@ -729,6 +731,20 @@
 						modal.classList.add('hidden');
 					}, 300);
 				}
+			}
+
+			function closeModalMenu() {
+				const modal = document.getElementById('modalMenu');
+				const content = document.getElementById('modalMenuContent');
+
+				// Yopish animatsiyasi
+				content.classList.add('-translate-y-10', 'opacity-0');
+				content.classList.remove('translate-y-0', 'opacity-100');
+
+				// Animatsiya tugagach, modalni yashirish
+				setTimeout(() => {
+					modal.classList.add('hidden');
+				}, 300);
 			}
 
 			// Fonni bosganda yopish
